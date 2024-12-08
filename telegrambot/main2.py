@@ -190,7 +190,7 @@ class TelegramBot:
         self.app.run_polling()
 
 def main():
-    bot = TelegramBot('5037630202:AAGvlFzKHXqzFOGiOovTxQXG3WTQ-RoDZp4', 'https://base-sepolia.g.alchemy.com/v2/eRWhiHbSOIN65kK-wfxNlAxO_R3r03yK')
+    bot = TelegramBot(os.getenv("TELEGRAM_BOT"), os.getenv("ALCHEMY_PROVIDER_URL"))
     bot.run()
 
 if __name__ == "__main__":
