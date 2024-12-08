@@ -10,7 +10,7 @@ export class NLProcessor {
   private contractAbi: any[];
 
   constructor(apiKey: string, contractAbi: any[]) {
-    const oai = new Groq({ apiKey:"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" });
+    const oai = new Groq({ apiKey: process.env.GROQ });
     this.client = Instructor({
       client: oai,
       mode: "FUNCTIONS"
