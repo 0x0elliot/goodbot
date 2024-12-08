@@ -57,7 +57,7 @@ class NLProcessor {
 
   constructor(apiKey, contractAbi) {
     const oai = new Groq({
-      apiKey: "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",
+      apiKey: process.env.GROQ,
     });
     this.client = Instructor({
       client: oai,
@@ -94,8 +94,8 @@ const brianCDPSDK = new BrianCoinbaseSDK({
   coinbaseApiKeySecret: process.env.CDP_SDK_API_KEY_SECRET,
 });
 await brianCDPSDK.importWallet({
-  walletId: "85becdbc-69ab-4f57-9bd7-2024b5a3d826",
-  seed: "347f5892c4cf26584cb2b91d5395ed504ee9b37a5ef5258f2a868c8c0cad3ecd",
+  walletId: process.env.WALLET_ID,
+  seed: process.env.SEED,
 });
 const sessions = new Map();
 // Coinbase.configure({
