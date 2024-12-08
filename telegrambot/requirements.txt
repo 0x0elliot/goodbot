@@ -1,0 +1,6 @@
+python-telegram-bot>=20.0
+python-dotenv
+cdp-sdk
+eth-account 
+web3
+eth-utils
